@@ -101,7 +101,8 @@ cnpm start 启动开发环境后，dora会将我们在proxy.config.js书写的�
 
 `对组件进行分类，其实就是避免了数据多个操作入口，统一由组件各自的Model传输，避免零散、组件到处都在处理数据，带来的后期维护上的困难`  
 
-**CSS Modules**
+**CSS Modules**  
+
 &nbsp;&nbsp;&nbsp;&nbsp;利用webpack的loader的css?modules开启style的命名空间的书写方式  
 
 **Layout**
