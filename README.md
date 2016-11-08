@@ -1,29 +1,28 @@
 # Management
----
 
 &nbsp;&nbsp;&nbsp;&nbsp;该系统是后台管理系统的一个子模块，是以用户数据为基础主要展示对用户数据的`展示`、`排序`、`分页`、`搜索`、`新增`、`删除`、`修改`等基本功能。  
 &nbsp;&nbsp;&nbsp;&nbsp;目的是为了让大家对系统的`颜色搭配`、`显示状态`、`交互方式`进行评估。
 
 # Usage
----  
-1. ** 安装npm中国镜像 **  
+
+1. 安装npm中国镜像  
 > npm i -g cnpm --registry=https://registry.npm.taobao.com  
 
-2. ** 开发环境 **
+2. 开发环境
 > cnpm start
 
-3. ** 生成环境 **
+3. 生成环境
 > cnpm run build
 
 
 # 技术选型
----
+
 &nbsp;&nbsp;&nbsp;&nbsp;该系统由于现在是采用前端Mock一些假数据，前后端分离，采用后端输出接口，前端处理和显示，基于这种完全由数据驱动ui，又是以组件进行构建页面的方式，所以主体框架采用React + Redux的形式。  
 
 &nbsp;&nbsp;&nbsp;&nbsp;因为后台管理系统是以功能性操作和展示为主的网站，因为组件是构成页面的唯一元素，那么对ui组件框架应该是基于React封装的，考虑选择的是Antd框架，它的优点在于`文档清晰`，**Container Component**和**Show Component**`职责分层清楚`，仅仅只从上一级Component的`props单向的接收数据`，避免过多的数据入口造成的代码不可维护性。
 
 # 开发步骤
----
+
 遵循着 Model -> Service -> Component这样流程进行开发
 
 * 项目结构划分  
@@ -35,7 +34,6 @@
 * Layout
 
 # 具体实现
----
 
 ** 项目结构划分 **  
 > 进行项目结构划分，可以很清晰的体现项目的功能  
