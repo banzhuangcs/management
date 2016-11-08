@@ -35,7 +35,7 @@
 
 # 具体实现
 
-** 项目结构划分 **  
+**项目结构划分**  
 > 进行项目结构划分，可以很清晰的体现项目的功能  
 cnpm i -g vue-cli
 vue new app(创建的项目名)
@@ -55,7 +55,7 @@ vue new app(创建的项目名)
     ├── package.json     # 项目信息
     └── proxy.config.js  # 数据mock配置
 
-** 提供数据访问地址 **
+**提供数据访问地址**
 > 快速模仿真实后端访问地址，让前端在开发阶段中可以独立于后端开发，减少后续联调的沟通成本。  
 cnpm start 启动开发环境后，dora会将我们在proxy.config.js书写的访问地址映射到我们开启的本地服务器中
 使用mockjs快速的根据生成规则来产生符合规则的数据
@@ -65,7 +65,7 @@ cnpm start 启动开发环境后，dora会将我们在proxy.config.js书写的�
       'GET /api/users': () => Mock.mock({ 'data|100', [{ 'id|+1': 0, name: '@cname' }] })
     }
 
-** 抽离Model **  
+**抽离Model**  
 
 后台管理系统其实就是对数据的`查询`和`操作`，复杂点就是如何组织这些数据。  
 * 查询(Select)
@@ -84,13 +84,13 @@ cnpm start 启动开发环境后，dora会将我们在proxy.config.js书写的�
     }
 
 
-** 编写services **  
+**编写services**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;独立出数据和操作其本身的方法
 
 
     export async function query () {}  
-** 设计组件 **  
+**设计组件**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;基于React组件化开发思想，每个组件都是相对独立的，每个组件专注于做自己的事这个原则可以将组件进行分类
 * Container Component
@@ -101,7 +101,7 @@ cnpm start 启动开发环境后，dora会将我们在proxy.config.js书写的�
 
 `对组件进行分类，其实就是避免了数据多个操作入口，统一由组件各自的Model传输，避免零散、组件到处都在处理数据，带来的后期维护上的困难`  
 
-**  CSS Modules **
+**CSS Modules**
 &nbsp;&nbsp;&nbsp;&nbsp;利用webpack的loader的css?modules开启style的命名空间的书写方式  
 
-** Layout **
+**Layout**
