@@ -37,7 +37,7 @@
 
 **项目结构划分**  
 > 进行项目结构划分，可以很清晰的体现项目的功能  
-cnpm i -g vue-cli
+cnpm i -g vue-cli  
 vue new app(创建的项目名)
 
 
